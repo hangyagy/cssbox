@@ -1,0 +1,17 @@
+<h1>Teszt</h1>
+Hello world!
+
+<script type="text/javascript">
+$(document).ready(function() {
+	$('button.close-modal').one('click', function(e) {
+		e.preventDefault();
+
+		var $overlay = $(this).closest('.cssbox-overlay');
+		var cssbox   = $overlay.data('cssbox');
+		
+		cssbox.close();
+	});
+});
+</script>
+
+<button class="close-modal">Close me!</button>
